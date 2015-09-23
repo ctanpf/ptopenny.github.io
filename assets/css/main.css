@@ -3041,19 +3041,29 @@
 
 	}
 	
-	.scene {
-  display: inline-block;
+@keyframes bob {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 0.2em;
+  }
+}
+sheepbody {
+  background: #53bfe0;
   vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+}
+sheepbody:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
 }
 
-.text {
-  color: white;
-  font-size: 2em;
-  font-family: helvetica;
-  font-weight: bold;
-}
+
 
 .sheep {
   display: inline-block;
@@ -3152,7 +3162,7 @@
   right: -5%;
   transform: rotate(20deg);
 }
-.sheep .body {
+.sheep .sheepbody {
   display: inline-block;
   width: 7em;
   height: 7em;
@@ -3186,11 +3196,4 @@
   border-radius: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-@keyframes bob {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: 0.2em;
-  }
-}
+
